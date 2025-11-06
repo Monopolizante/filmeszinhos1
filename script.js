@@ -87,7 +87,7 @@ function resetarLista() {
 }
 function mostrarLista() {
     const listaFilmes = document.getElementById("lista-filmes");
-    const botao = document.querySelector("button:last-of-type"); // Get the last button (Show List)
+    const botao = document.querySelector("#mostrar"); // Get the last button (Show List)
     
     if (mostrado) {
         listaFilmes.style.opacity = "0";
@@ -98,7 +98,18 @@ function mostrarLista() {
     }
     mostrado = !mostrado; // Toggle the state
 }
-
+function retirarFilmeEspecifico(){
+    inputFilme = document.querySelector("#input-filme");
+    if (filmes.includes(inputFilme.value)) {
+        console.log(filmes.indexOf(inputFilme.value))
+        filmes.splice(filmes.indexOf(inputFilme.value), 1);
+        localStorage.setItem('filmes', JSON.stringify(filmes));
+        alert("Filme removido com sucesso!");
+        atualizarListaFilmes(); // Atualiza a lista
+    } else {
+        alert("Filme não encontrado na lista")
+    }
+}
 // Inicialização do array filmes
 let filmes = JSON.parse(localStorage.getItem('filmes')) || [
     "1922",
