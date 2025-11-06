@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmeszinhos🎬🎬</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="div-titulo">
+        <h2 class="title">Olá, e seja bem vindo ao</h2>
+        <h1 class="main-title">Filmeszinhos🎬🎬</h1>
+        <h3 id="filme-sorteado" class="main-title"></h3>
+    </div>
+    <div class="div-input-bar">
+        <input type="text" placeholder="Alguma sugestão pra hoje?" id="input-filme">
+    </div>
+    <div class="content-wrapper">
+        <div class="div-inputs">
+            <button onclick="adicionarFilme()">Adicionar filme</button>
+            <button onclick="removerFilme()">Remover último filme</button>
+            <button onclick="sortearFilme()">Sortear filme</button>
+            <button onclick="removerFilmeSorteado()">Remover filme já sorteado</button>
+            <button onclick="resetarLista()">Resetar Lista</button>
+            <button onclick="mostrarLista()">Mostrar lista de filmes</button>   
+        </div>
+        <div class="div-listaFilmes">
+            <ul id="lista-filmes" style="opacity: 0;">
+            
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="texto-footer">Feito por Robson & Ana</p>
+        <p class="texto-footer" style="opacity: 0.6;">Patente pendente </p>
+    </footer>
+    </body>
+</body>
+</html>
